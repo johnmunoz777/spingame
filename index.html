@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        #wheel {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 10px solid #000;
+            position: relative;
+        }
+        .segment {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 0;
+        }
+        #pointer {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid black;
+            position: absolute;
+            top: -40px;
+            left: calc(50% - 20px);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wheel"></div>
+    <div id="pointer"></div>
+    <button onclick="spinWheel()">Spin the Wheel</button>
+    <div id="result"></div>
+    <script src="wheel.js"></script>
+</body>
+</html>
